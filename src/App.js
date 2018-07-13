@@ -1,5 +1,7 @@
 import React from 'react';
+import AddForm from './components/addForm';
 import PeopleList from './components/PeopleList';
+
 
 class App extends React.Component{
     constructor(){
@@ -10,22 +12,36 @@ class App extends React.Component{
     componentWillMount(){
         this.setState({
             people:[{
+                id:1,
                 name:"michael",
-                img:'https://avatars2.githubusercontent.com/u/5624255?v=3&s=100',
-                age:20
+                age:20,
+                type:"informative",
+                post:"This is a sample posting here that is in the system already"
             },{
+                id:1,
                 name:"laura",
-                img:"https://cdn.pixabay.com/photo/2018/06/23/16/22/romanesco-3493007_1280.jpg",
-                age:20
+                age:20,
+                type:"informative",
+                post:"this is another post sampling. If you fill in the information above, you can also add the the comments down here! However,due to it not being attached to a database when you update the site you input will not save "
             }]
         })
+    }
+    updateName(info){
+      let people = this.state.people;
+      people.push(info);
+      this.setState({people:people})
+
+
+
     }
     render(){
         return(
 <div>
     <h1>using props to pass data to other components</h1>
+    <h3>This allows you to fill out a form and have the information immediately show below.</h3>
+    <h4>It is not linked to a database so the information is not persistent</h4>
 
-
+            <AddForm updateName={this.updateName.bind(this)}/>
     <PeopleList people={this.state.people}/>
     </div>
         )

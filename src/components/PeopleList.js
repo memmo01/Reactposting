@@ -5,15 +5,15 @@ import PeopleListCreate from './PeopleListCreate';
 class PeopleList extends React.Component{
     render(){
 
-        let x;
-        x = this.props.people.map(peoples=>{
-                return <PeopleListCreate people={peoples}/>
+        let individualUser;
+        individualUser = this.props.people.map(peoples=>{
+                return <PeopleListCreate key={peoples.id} people={peoples}/>
         })
 
         return(
 
             <div>
-                {x}
+                {individualUser}
 
                 </div>
         )
