@@ -1,4 +1,18 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+}
+.App-container , #userList{
+  width:80%;
+  margin:0 auto;
+}
+header{
+   text-align: center; 
+}
+ #form{
+  width:50%;
+  margin:0 auto;
+} 
+#userList{
+  margin-bottom:50px;
 }
 

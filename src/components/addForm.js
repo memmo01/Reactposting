@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'uuid';
 
 class AddForm extends React.Component{
     constructor(){
@@ -15,6 +16,7 @@ class AddForm extends React.Component{
   
 
         this.setState({newPerson:{
+            id:uuid.v4(),
             name:this.refs.name.value,
             age:this.refs.age.value,
             type:this.refs.type.value,
