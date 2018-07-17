@@ -108,10 +108,11 @@ class App extends React.Component{
     <div className="App-container">
         
         <header>
-           
+            <div className="jumbotron">
             <h1>using props to pass data to other components</h1>
             <h3>This allows you to fill out a form and have the information immediately show below.</h3>
             <h4>It is not linked to a database so the information is not persistent</h4>
+            </div>
         </header>
 
         <section id='form'>
@@ -119,8 +120,10 @@ class App extends React.Component{
         </section>
 
 
-        <section id="userList">    
+        <section id="userList">  
+            <div className="jumbotron">  
             <PeopleList people={this.state.people}/>
+            </div>
         </section>
     
         <section id="apiCall">

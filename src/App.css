@@ -12,7 +12,13 @@ header{
   width:50%;
   margin:0 auto;
 } 
-#userList{
-  margin-bottom:50px;
+#userList, .apiList{
+  margin-top:40px;
+}
+.card-text li{
+list-style: none;
+}
+.apiInfo{
+  padding:30px;
 }
 
